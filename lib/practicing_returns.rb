@@ -10,3 +10,12 @@ end
 
 
 hello(["Tim", "Tom", "Jim"]) { |name| puts "Hi, #{name}" }
+
+def hello(array)
+  i = 0 
+  collection = []
+  while i < array.lenth 
+    collection << yield(array[i])
+    i += 1 
+  end 
+end 
